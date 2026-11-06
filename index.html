@@ -1,123 +1,15 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Conversation Intelligence (HyperKode)</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-           line-height: 1.55; margin: 0; padding: 0; }
-    main { max-width: 900px; margin: 0 auto; padding: 32px 20px; }
-    h1 { font-size: 28px; margin: 0 0 8px; }
-    .meta { opacity: 0.8; margin: 0 0 24px; }
-    h2 { font-size: 20px; margin-top: 28px; }
-    h3 { font-size: 16px; margin-top: 18px; }
-    ul { padding-left: 20px; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-    .card { border: 1px solid rgba(127,127,127,0.35); border-radius: 12px; padding: 16px 16px; }
-    a { color: inherit; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=https://hyperkode.com/privacy.html">
+  <link rel="canonical" href="https://hyperkode.com/privacy.html">
+  <title>Privacy policy moved to HyperKode</title>
 </head>
 <body>
-  <main>
-    <h1>Privacy Policy — Conversation Intelligence (HyperKode)</h1>
-    <p class="meta"><strong>Last updated:</strong> November 6, 2026</p>
-
-    <div class="card">
-      <p>This Privacy Policy describes how the <strong>Conversation Intelligence</strong> Chrome extension (the “Extension”) handles information as part of its local-first AI conversation intelligence features.</p>
-    </div>
-
-    <h2>1) What the Extension does</h2>
-    <p>Conversation Intelligence runs on supported chat sites (ChatGPT and Claude) to build a visual minimap of the conversation and provide features such as navigation, search, starring, summaries, and export.</p>
-
-    <h2>2) Information the Extension processes</h2>
-
-    <h3>A. On-page content (ChatGPT / Claude conversation content)</h3>
-    <p>When you are on a supported page, the Extension reads and analyzes the page content (e.g., prompts and responses) <strong>to render the minimap, enable navigation, run search, compute word frequency/similarity, and optionally generate summaries</strong>. This processing occurs <strong>in your browser</strong>.</p>
-
-    <h3>B. User settings and local state (stored by the Extension)</h3>
-    <p>The Extension stores certain information locally using Chrome’s extension storage (the Extension requests the <code>storage</code> permission).</p>
-    <p>Examples may include:</p>
-    <ul>
-      <li>Display preferences (themes, modes, toggles)</li>
-      <li>Feature enable/disable choices (e.g., semantic features, overlays)</li>
-      <li>Local UI state</li>
-      <li>User markers (e.g., stars) and related metadata (if enabled)</li>
-      <li>Optional local caches used for performance (e.g., summary/similarity cache)</li>
-    </ul>
-
-    <h3>C. Local layout diagnostics</h3>
-    <p>When recognizable messages are missing from its map, the Extension shows a warning. <strong>Copy diagnostic</strong> copies only the supported site name, extension version and message counts. It includes no message text, conversation titles, message identifiers or page URL. Diagnostics are not uploaded automatically.</p>
-
-    <h3>D. Exported data (only when you choose to export)</h3>
-    <p>If you use an export feature, the Extension generates an export artifact in your browser. Exports are initiated by you and produced locally.</p>
-
-    <h3>E. Imported conversation library</h3>
-    <p>JSON exports you choose to import are read and stored locally in this browser profile. The library does not upload imports, contact AI providers, download remote attachments, or sync imported conversations with the original service. External links open only when you choose to follow them.</p>
-    <p>You can remove imported conversations from the library without changing the source file or original chat. Clearing extension data or uninstalling removes the locally stored library. Keep your original export as a backup.</p>
-
-    <h2>3) What the Extension does not collect by default</h2>
-    <ul>
-      <li>The Extension does <strong>not</strong> sell personal information.</li>
-      <li>The Extension does <strong>not</strong> use your data for advertising.</li>
-      <li>The Extension does <strong>not</strong> transmit your chat content to HyperKode servers.</li>
-    </ul>
-
-    <h2>4) Network access and third parties</h2>
-
-    <h3>Default behavior: no off-device sharing</h3>
-    <p>By default, the Extension does not send your chat content to any external server.</p>
-
-    <h3>Optional AI integrations</h3>
-    <p>The Extension may optionally connect to a <strong>local</strong> AI service running on your computer, such as an LLM server listening on <code>http://localhost:11434/</code> or <code>http://127.0.0.1:11434/</code>, or to supported <strong>remote BYOK providers</strong> if you explicitly enable and configure them.</p>
-    <ul>
-      <li>Local AI connections, if used, are <strong>loopback (on-device)</strong>.</li>
-      <li>Remote BYOK requests are only made when you choose to enable and configure a supported provider.</li>
-      <li>The Extension does not send your chat content to HyperKode servers by default.</li>
-    </ul>
-
-    <p>AI is <strong>off by default</strong> on a fresh installation and is configured in Labs. Remote AI can send relevant conversation text, requests and derived results directly to the chosen provider, whose terms and privacy policy apply. Provider API keys are kept in browser-session extension storage and can be cleared in the Extension. Keys are not included in diagnostics or sent to HyperKode.</p>
-
-    <h2>5) Permissions explained (plain English)</h2>
-    <p>The Extension requests:</p>
-    <ul>
-      <li><strong><code>storage</code></strong>: to save your settings and local state (such as preferences, stars, and feature caches).</li>
-      <li><strong>Host permissions for <code>localhost:11434</code> / <code>127.0.0.1:11434</code></strong>: to allow optional connections to a local AI service on your machine.</li>
-      <li><strong>Host permissions for supported remote provider endpoints</strong>: to allow optional direct BYOK connections to providers you choose to configure.</li>
-    </ul>
-    <p>The Extension runs on specific sites (ChatGPT and Claude) via content scripts in order to render the minimap and related UI features.</p>
-
-    <h2>6) Data retention</h2>
-    <ul>
-      <li>Locally stored settings/state persist until you clear them (by clearing extension data in Chrome) or uninstall the Extension.</li>
-      <li>If you enable local AI features, any local caching remains on your device and follows the same retention behavior.</li>
-    </ul>
-
-    <h2>7) Security</h2>
-    <p>The Extension is designed to minimize data collection and keep processing on-device. You control the Extension’s stored data through Chrome’s extension management settings.</p>
-
-    <h2>8) Your choices and controls</h2>
-    <p>You can:</p>
-    <ul>
-      <li>Disable or uninstall the Extension at any time</li>
-      <li>Clear extension storage via Chrome settings</li>
-      <li>Use features like summaries only if you choose to enable them, whether through a local AI service or a supported remote BYOK provider</li>
-    </ul>
-
-    <h2>9) Changes to this policy</h2>
-    <p>We may update this policy as the Extension evolves. The “Last updated” date will be revised accordingly. Material changes will be reflected in the Chrome Web Store listing and/or Extension UI where appropriate.</p>
-
-    <h2>10) Limited use</h2>
-    <p>The Extension's use of user data adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. Data is used only for the disclosed conversation navigation, organization, export and user-enabled analysis features. It is not sold or used for advertising, unrelated profiling, creditworthiness or lending decisions.</p>
-
-    <h2 id="contact">11) Contact</h2>
-    <p><strong>Developer:</strong> HyperKode (Carlos Enrique Ortiz) © 2026<br/>
-       <strong>Website:</strong> <a href="https://hyperkode.com">https://hyperkode.com</a><br/>
-       <strong>Support:</strong> <a href="mailto:enrique.ortiz+hk@gmail.com">enrique.ortiz+hk@gmail.com</a>
-    </p>
-  </main>
+  <h1>The privacy policy has moved</h1>
+  <p><a href="https://hyperkode.com/privacy.html">Read the Conversation Intelligence privacy policy on HyperKode.</a></p>
+  <p><a href="https://hyperkode.com/support.html#conversation-intelligence">Get support.</a></p>
 </body>
 </html>
